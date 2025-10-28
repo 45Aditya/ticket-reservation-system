@@ -2,32 +2,19 @@ import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema(
   {
-    eventId: {
-      type: String,
-      required: true,
-      unique: true,
+    eventName: {type: String, required: true, unique: true},
+    eventId: { type: String, required: true, unique: true },
+    totalSeats: { type: Number, required: true },
+    availableSeats: { 
+      type: Number,  
+      default: function () {
+        return this.totalSeats;
+      } 
     },
-    name: {
-      type: String,
-      required: true,
-    },
-    totalSeats: {
-      type: Number,
-      required: true,
-    },
-    availableSeats: {
-      type: Number,
-      required: true,
-    },
-    version: {
-      type: Number,
-      default: 0,
-    },
+    reservationCount: {type: Number, default: 0},
+    version: { type: Number, default: 0 },
   },
-  {
-    timestamps: true,
-    versionKey: false,
-  }
+  { timestamps: true, versionKey: false }
 );
 
 const Event = mongoose.model("Event", eventSchema);
