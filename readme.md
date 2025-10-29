@@ -39,7 +39,7 @@ Supports dynamic seat management, conflict handling, and automatic rollback on d
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/event-reservation-system.git
+git clone https://github.com/yourusername/ticket-reservation-system.git
 cd event-reservation-system
 ```
 
