@@ -1,4 +1,4 @@
-# 🎟️ Event Reservation System
+# 🎟️ Ticket Reservation System
 
 A simple Node.js + Express-based API for managing **event seat reservations**.  
 Supports dynamic seat management, conflict handling, and automatic rollback on declined bookings.
